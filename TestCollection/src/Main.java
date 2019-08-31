@@ -23,6 +23,7 @@ public class Main {
 		a = scan.nextInt();
 		switch (a) {
 		case 1:
+		{
 			System.out.println("Enter empno");
 			int empno = scan.nextInt();
 			System.out.println("Enter emp name");
@@ -36,14 +37,19 @@ public class Main {
 
 			Student student = new Student(empno, ename, salary, designation, dept);
 			stud.add(student);
-
+			break;
+		}
 		case 2:
+		{
 			System.out.println("Displaying record of all employees");
 			for (int i = 0; i < stud.size(); i++) {
 				// System.out.println(stud.toArray().toString());
 				System.out.println(stud.get(i).toString());
+				break;
 			}
+		}
 		case 3:
+		{
 			System.out.println("Enter empno for removing its data");
 			int eno = scan.nextInt();
 			for (int j = 0; j < stud.size(); j++) {
@@ -52,12 +58,18 @@ public class Main {
 				}
 
 			}
+			break;
+		}
 		case 4:
+		{
 			System.out.println("Clearing all data");
 
 			stud.clear();
+			break;
+		}
 
 		case 5:
+		{
 			System.out.println("Enter emp no and change salary");
 			int em = scan.nextInt();
 			for (int p = 0; p < stud.size(); p++) {
@@ -66,21 +78,29 @@ public class Main {
 				}
 
 			}
+			break;
+		}
 
 		case 6:
+		{
 			System.out.println("Enter empno for searching");
 			int eno2 = scan.nextInt();
 			for (int k = 0; k < stud.size(); k++) {
 				if (stud.get(k).getEmpno() == eno2)
 					System.out.println(stud.get(eno2).toString());
 			}
+			break;
+		}
 		case 7:
+		{
 			String dnm = scan.next();
 			for (int t = 0; t < stud.size(); t++) {
 				if (stud.get(t).getDept().equals(dnm)) {
 					System.out.println(stud.get(t).toString());
 				}
 			}
+			break;
+		}
 		default:
 			System.out.println("Exit");
 		}
